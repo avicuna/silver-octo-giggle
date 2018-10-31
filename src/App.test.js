@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Contacts from './Contacts';
+import Contacts from './Components/Contacts/Contacts';
 import App from './App';
 
 describe('App', () => {

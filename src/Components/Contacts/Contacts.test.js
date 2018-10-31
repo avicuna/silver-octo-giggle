@@ -12,5 +12,7 @@ describe('Contacts', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
 
+    it('')
+
 
 });

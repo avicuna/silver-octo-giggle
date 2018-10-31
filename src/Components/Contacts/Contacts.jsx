@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactsForm from './Contacts-Form';
-import ContactItem from './Contact-Item';
+import ContactsForm from '../Contact-Form/Contacts-Form';
+import ContactItem from '../Contact-Item/Contact-Item';
 
 class Contacts extends React.Component {
     constructor(props){
@@ -80,7 +80,9 @@ class Contacts extends React.Component {
 
     render() {
         return (
-            <section>
+            <div>
+                <h1>Contacts</h1>
+                <br/>
                 <ContactsForm
                     currentName={this.state.currentName}
                     currentNumber={this.state.currentNumber}
@@ -103,7 +105,7 @@ class Contacts extends React.Component {
                         })
                     }
                 </ul>
-            </section>
+            </div>
         );
     }
 }
