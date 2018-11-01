@@ -20,7 +20,7 @@ class ContactItem extends React.Component {
                 <input
                     type="text"
                     ref={(value) => {
-                    this.nameInput = value
+                        this.nameInput = value
                     }}
                     defaultValue={this.props.details.name}
                 />
@@ -80,9 +80,9 @@ class ContactItem extends React.Component {
     render() {
         const { isEditing } = this.state;
         return (
-            <div>
+            <>
                 {isEditing ? this.renderForm() : this.renderItem()}
-            </div>
+            </>
         );
     };
 }

@@ -5,7 +5,7 @@ import ContactsForm from "../Contact-Form/Contacts-Form";
 import ContactItem from "../Contact-Item/Contact-Item";
 
 describe('Contacts', () => {
-    
+
     it('should render a <div />', () => {
         let wrapper = shallow(<Contacts/>);
         expect(wrapper.find('div').length).toEqual(1);
@@ -38,7 +38,7 @@ describe('Contacts', () => {
             ],
             currentName: '',
             currentNumber: ''
-        }
+        };
         const index = 0;
         const changeStatus = jest.fn();
         const deleteContact = jest.fn();
