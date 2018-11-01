@@ -12,7 +12,7 @@ class ContactItem extends React.Component {
         this.renderItem = this.renderItem.bind(this);
         this.toggleState = this.toggleState.bind(this);
         this.updateItem = this.updateItem.bind(this);
-    }
+    };
 
     renderForm(){
         return (
@@ -33,8 +33,8 @@ class ContactItem extends React.Component {
                 />
                 <button type="submit">Update Contact</button>
             </form>
-        )
-    }
+        );
+    };
 
     renderItem(){
         return (
@@ -42,8 +42,7 @@ class ContactItem extends React.Component {
                 this.props.clickHandler(this.props.index);
             }} className={this.props.details.completed ? 'completed' : ''}
             >
-                {"Name: " + this.props.details.name}
-                <br/>
+                {"Name: " + this.props.details.name + "\n"}
                 {"Phone Number: " + this.props.details.number}
                 <br/>
 
@@ -60,21 +59,21 @@ class ContactItem extends React.Component {
                     Edit Item
                 </button>
             </li>
-        )
-    }
+        );
+    };
 
     toggleState(){
         const {isEditing} = this.state;
         this.setState({
             isEditing: !isEditing
         });
-    }
+    };
 
     updateItem(e){
         e.preventDefault();
         this.props.editContact(this.props.index, this.nameInput.value, this.numberInput.value);
         this.toggleState();
-    }
+    };
 
 
 
@@ -84,8 +83,8 @@ class ContactItem extends React.Component {
             <div>
                 {isEditing ? this.renderForm() : this.renderItem()}
             </div>
-        )
-    }
+        );
+    };
 }
 
 export default ContactItem;

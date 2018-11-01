@@ -21,16 +21,23 @@ class Contacts extends React.Component {
         }
     }
 
-    deleteContact(index){
-        console.log(index);
+    /**
+     * Delete contact from contact list.
+     * @param index
+     */
 
+    deleteContact(index){
         let { contacts } = this.state;
         contacts.splice(index, 1);
-
         this.setState({
             contacts
         });
     }
+
+    /**
+     * Add a contact to contact list.
+     * @param e
+     */
 
     addContact(e){
         e.preventDefault();
@@ -47,17 +54,34 @@ class Contacts extends React.Component {
         });
     }
 
+    /**
+     * Update the name portion of a contact.
+     * @param newName
+     */
+
     updateName(newName){
         this.setState({
             currentName: newName.target.value
         });
     }
 
+    /**
+     * Update the number portion of a contact.
+     * @param newNumber
+     */
+
     updateNumber(newNumber){
         this.setState({
             currentNumber: newNumber.target.value
         })
     }
+
+    /**
+     * Edits the contact as a whole.
+     * @param index
+     * @param newName
+     * @param newNumber
+     */
 
     editContact(index, newName, newNumber){
         let {contacts} = this.state;
@@ -68,6 +92,11 @@ class Contacts extends React.Component {
             contacts
         });
     }
+
+    /**
+     * Changes the status of whether a contact has been completed.
+     * @param index
+     */
 
     changeStatus(index){
         let {contacts} = this.state;
@@ -91,6 +120,7 @@ class Contacts extends React.Component {
                     addContact={this.addContact}
                 />
                 <br/>
+                <h4>Contacts List</h4>
                 <ul>
                     {
                         this.state.contacts.map((contact, index) => {
