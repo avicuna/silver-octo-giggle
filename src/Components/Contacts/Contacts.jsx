@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'mdbreact';
 import ContactsForm from '../Contact-Form/Contacts-Form';
 import ContactItem from '../Contact-Item/Contact-Item';
 
@@ -121,7 +122,7 @@ class Contacts extends React.Component {
                 />
                 <br/>
                 <h4>Contacts List</h4>
-                <ul>
+                <ul id="contacts-list">
                     {
                         this.state.contacts.map((contact, index) => {
                             return <ContactItem

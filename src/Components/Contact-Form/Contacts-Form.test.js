@@ -38,6 +38,10 @@ describe('Contact Form', () => {
         expect(updateNumber).toBeCalledWith('0000000000');
     });
 
-    it('Button should call addContact on submit')
+    it('should call addContact when form is submitted', () => {
+        const form = wrapper.find('form');
+        form.simulate('submit');
+        expect(addContact).toBeCalled();
+    });
 
 });

@@ -26,6 +26,10 @@ li {
     list-style-type: none;
 }
 
+#contacts-list{
+    margin-right: 40px;
+}
+
 
 @keyframes App-logo-spin {
   from {

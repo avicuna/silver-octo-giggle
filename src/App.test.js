@@ -15,7 +15,7 @@ describe('App', () => {
 
   it('should render the contacts component', () => {
       expect(wrapper.containsMatchingElement(<Contacts />)).toEqual(true);
-  })
+  });
 
 
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'mdbreact';
 
 class ContactItem extends React.Component {
     constructor(props){
@@ -31,7 +32,7 @@ class ContactItem extends React.Component {
                     }}
                     defaultValue={this.props.details.number}
                 />
-                <button type="submit">Update Contact</button>
+                <Button type="submit">Update Contact</Button>
             </form>
         );
     };
@@ -43,21 +44,22 @@ class ContactItem extends React.Component {
             }} className={this.props.details.completed ? 'completed' : ''}
             >
                 {"Name: " + this.props.details.name + "\n"}
+                <br/>
                 {"Phone Number: " + this.props.details.number}
                 <br/>
 
-                <button onClick={(e) => {
+                <Button onClick={(e) => {
                     e.stopPropagation();
                     this.props.deleteContact(this.props.index)
                     }}>
                     Delete
-                </button>
-                <button onClick={(e) => {
+                </Button>
+                <Button onClick={(e) => {
                     e.stopPropagation();
                     this.toggleState();
                     }}>
                     Edit Item
-                </button>
+                </Button>
             </li>
         );
     };

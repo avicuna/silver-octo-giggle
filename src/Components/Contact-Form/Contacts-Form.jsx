@@ -1,4 +1,6 @@
 import React from 'react';
+import { Input, Button } from 'mdbreact';
+
 
 const ContactsForm = (props) => {
     return (
@@ -21,7 +23,7 @@ const ContactsForm = (props) => {
                     value={props.currentNumber}
                     onChange={props.updateNumber}
                 />
-                <button type="submit">Submit</button>
+                <Button type="submit">Submit</Button>
             </form>
         </>
     )

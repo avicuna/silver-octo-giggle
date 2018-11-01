@@ -29,7 +29,19 @@ describe('Contact Item', () => {
         );
     });
 
-    it('')
+    it('should render item when isEditing is false', () => {
+        wrapper.setState({
+            isEditing: false
+        });
+        expect(wrapper.find('li').exists()).toEqual(true);
+    });
+
+    it('should call renderForm() when isEditing is true', () => {
+        wrapper.setState({
+            isEditing: true
+        });
+        expect(wrapper.find('form').exists()).toEqual(true);
+    });
 
 });
 
